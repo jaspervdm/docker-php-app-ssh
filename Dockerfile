@@ -11,8 +11,8 @@ RUN \
   yum install -y openssh-server pwgen sudo hostname vim mc links screen && \
   yum clean all && \
   
-  wget -O unrar.rpm http://pkgs.repoforge.org/unrar/unrar-5.0.3-1.el7.rf.x86_64.rpm
-  rpm -ivh unrar.rpm
+  wget -O unrar.rpm http://pkgs.repoforge.org/unrar/unrar-5.0.3-1.el7.rf.x86_64.rpm && \
+  rpm -ivh unrar.rpm && \
 
   ssh-keygen -q -b 1024 -N '' -t rsa -f /etc/ssh/ssh_host_rsa_key && \
   ssh-keygen -q -b 1024 -N '' -t dsa -f /etc/ssh/ssh_host_dsa_key && \
